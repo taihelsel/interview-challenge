@@ -1,0 +1,36 @@
+.app-sidebar{
+    background-color:#d6d8d7;
+    height:100%;
+    width:250px;
+    overflow: hidden;
+    text-align: center;
+}
+.app-sidebar-randomclr{
+    margin: 65px 0 0 0;
+    width: 75%;
+    display: inline-block;
+    padding: 11px 5px 7px 5px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.app-sidebar-randomclr h3{
+    user-select: none;
+    margin:0;
+    padding:0;
+}
+.app-sidebar-colors{
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    width: 85%;
+    display: inline-block;
+}
+.app-sidebar-colors li{
+    padding: 11px 0px;
+    font-size: 18px;
+    user-select: none;
+    cursor: pointer;
+}
