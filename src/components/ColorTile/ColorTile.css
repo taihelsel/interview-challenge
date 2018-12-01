@@ -6,6 +6,7 @@
     margin:15px 25px;
 }
 .color-tile-preview{
+    cursor: pointer;
     width:144px;
     height:150px;
     border-top-right-radius: 8px;

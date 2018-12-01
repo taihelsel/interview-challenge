@@ -6,6 +6,7 @@ import {colors} from "../../data/colors.js";
 import Nav from "../Nav/Nav.js";
 import SideBar from "../SideBar/SideBar.js";
 import ColorTile from "../ColorTile/ColorTile.js";
+import ColorTileNav from "../ColorTileNav/ColorTileNav.js";
 class ColorApp extends Component {
     constructor(){
         super();
@@ -18,6 +19,7 @@ class ColorApp extends Component {
     componentWillMount(){
         this.generatePages();
     }
+    updatePage = (i) => this.setState({pageIndex:parseInt(i)-1});
     calcMaxTiles = () => {
         let maxCol =  Math.floor((window.innerWidth - 300)/200);
         let maxRow = Math.floor((window.innerHeight-272)/187);
@@ -44,6 +46,7 @@ class ColorApp extends Component {
                         {this.state.pages[this.state.pageIndex].map((color)=>{
                             return <ColorTile colorName={color}/>
                         })}
+                        <ColorTileNav totalNum={this.state.pages.length} currentIndex={this.state.pageIndex} updatePage={this.updatePage} />
                     </div>
                 </div>
             </div>

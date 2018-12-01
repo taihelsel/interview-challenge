@@ -1,29 +1,29 @@
 import React, { Component } from 'react';
 import './ColorTile.css';
 class ColorTile extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            colorName : this.props.colorName,
-            colorHex : "",
-            colorRGB : "",
+            colorName: this.props.colorName,
+            colorHex: "",
+            colorRGB: "",
         }
     }
-    componentWillMount(){
+    componentWillMount() {
         this.getColorLabel();
     }
-    getColorLabel(){
+    getColorLabel() {
         let temp = document.createElement("div");
         temp.style.backgroundColor = this.props.colorName;
         document.body.appendChild(temp);
         let rgb = getComputedStyle(temp).backgroundColor;
         let hex = '#' + rgb.substr(4, rgb.indexOf(')') - 4).split(',').map((color) => parseInt(color).toString(16)).join('');
         document.body.removeChild(temp);
-        this.setState({colorRGB:rgb,colorHex:hex});
+        this.setState({ colorRGB: rgb, colorHex: hex });
     }
     render() {
         const styles = {
-            backgroundColor:this.props.colorName,
+            backgroundColor: this.props.colorName,
         }
         return (
             <div className="color-tile">
