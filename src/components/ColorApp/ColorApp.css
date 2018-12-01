@@ -5,4 +5,12 @@
 .color-app-body{
     width:100%;
     height:calc(100% - 4.5em);
+    overflow: hidden;
+    text-align:center;
+}
+.color-app-tile-wrapper{
+    text-align: left;
+    width: calc(100% - 250px);
+    margin-top: 35px;
+    display: inline-block;
 }
