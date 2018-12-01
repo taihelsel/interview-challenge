@@ -3,23 +3,30 @@
     height:187px;
     text-align:left;
     display: inline-block;
-    margin:15px 30px;
+    margin:15px 25px;
 }
 .color-tile-preview{
-    width:100%;
+    width:144px;
     height:150px;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
+    position: relative;
+    z-index: 2;
+    border-right: 3px solid #e6e3e36e;
+    border-top: 3px solid #e6e3e36e;
+    border-left: 3px solid #e6e3e36e;
 }
 .color-tile-label{
-    width: 120px;
+    position: relative;
+    width: 116px;
     margin: 0;
     background-color: white;
     padding: 7px 14px;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
-    box-shadow: 0px 0px 5px 0px #b7b7b7;
-    border-right: 1px solid #e2e2e2;
-    border-bottom: 1px solid #e2e2e2;
-    border-left: 1px solid #e2e2e2;
+    /* box-shadow: 0px 0px 5px 0px #b7b7b7; */
+    border-right: 3px solid #e6e3e36e;
+    border-bottom: 3px solid #e6e3e36e;
+    border-left: 3px solid #e6e3e36e;
+    z-index: 1;
 }

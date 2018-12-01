@@ -19,8 +19,8 @@ class ColorApp extends Component {
         this.generatePages();
     }
     calcMaxTiles = () => {
-        let maxCol =  Math.floor((window.innerWidth - 300)/150);
-        let maxRow = Math.floor((window.innerHeight-250)/187);
+        let maxCol =  Math.floor((window.innerWidth - 300)/200);
+        let maxRow = Math.floor((window.innerHeight-272)/187);
         return maxCol * maxRow;
     }
     generatePages = () => {
