@@ -20,9 +20,12 @@ class ColorTile extends Component {
             let rgb = getComputedStyle(temp).backgroundColor;
             let hex = '#' + rgb.substr(4, rgb.indexOf(')') - 4).split(',').map((color) => parseInt(color).toString(16)).join('');
             document.body.removeChild(temp);
-            this.setState({colorName:this.props.colorName, colorRGB: rgb, colorHex: hex });
+            this.setState({ colorName: this.props.colorName, colorRGB: rgb, colorHex: hex });
         }
         return this.state.colorHex;
+    }
+    handleClick = (e) =>{
+        this.props.handleClick({name:this.state.colorName,hex:this.state.colorHex,rgb:this.state.colorRGB});
     }
     render() {
         const styles = {
@@ -30,7 +33,7 @@ class ColorTile extends Component {
         }
         return (
             <div className="color-tile">
-                <div className="color-tile-preview" style={styles} />
+                <div onClick={this.handleClick} className="color-tile-preview" style={styles} />
                 <h3 className="color-tile-label">{this.getColorLabel()}</h3>
             </div>
         );
